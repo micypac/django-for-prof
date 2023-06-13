@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block title %}Books{% endblock title %}
+
+{% block content %}
+  {% comment %} 
+    object_list is the default name from view but we changed it using context_object_name
+    {% for book in object_list  %} 
+  {% endcomment %}
+  {% for book in book_list  %}
+    <div>
+      <h2><a href="">{{ book.title }}</a></h2>
+    </div>
+  {% endfor %}
+{% endblock content %}
