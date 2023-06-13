@@ -9,7 +9,8 @@
   {% endcomment %}
   {% for book in book_list  %}
     <div>
-      <h2><a href="{% url 'book_detail' book.id %}">{{ book.title }}</a></h2>
+      {% comment %} <h2><a href="{% url 'book_detail' book.id %}">{{ book.title }}</a></h2> {% endcomment %}
+      <h2><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></h2>
     </div>
   {% endfor %}
 {% endblock content %}
